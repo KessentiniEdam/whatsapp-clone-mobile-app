@@ -28,6 +28,11 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 5,
   }
+  ,
+  signIn: {
+   color: 'white',
+   marginTop: 20,
+  },
 });
 
 export default function Authentification({ navigation }) {
@@ -62,6 +67,7 @@ export default function Authentification({ navigation }) {
       ></View>
       <ImageBackground
         style={{
+          marginTop: -70,
           alignItems: "center",
           justifyContent: "center",
           flex: 1,
@@ -69,7 +75,7 @@ export default function Authentification({ navigation }) {
           width: "100%",
         }}  
         resizeMode='cover'
-        source={require("../assets/aba3.jpeg")}
+        source={require("../assets/whatsapp.jpg")}
       >
         <View
           style={{
@@ -111,7 +117,30 @@ export default function Authentification({ navigation }) {
             secureTextEntry={true}
             style={styles.input}
           />
-          <Button onPress={signIn} title="Sign in" />
+<TouchableOpacity
+  onPress={signIn}
+  style={{
+    backgroundColor: '#0d381eff',
+    paddingVertical: 10,
+    paddingHorizontal: 30,
+    borderRadius: 8,
+    marginTop: 10,
+    marginBottom: 30,
+  }}
+>
+  <Text
+    style={{
+      color: 'white',
+      fontWeight: 'bold',
+      fontSize: 18,
+      textShadowColor: '#000',
+      textShadowOffset: { width: 1, height: 1 },
+      textShadowRadius: 4,
+    }}
+  >
+    Sign In
+  </Text>
+</TouchableOpacity>
           <TouchableOpacity
             style={{
               paddingRight: 10,
